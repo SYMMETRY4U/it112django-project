@@ -1,0 +1,47 @@
+<!-- templates/theme.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-5">
+  <h2>Select Theme</h2>
+  <p>Themes on this site are provided by <a href="https://bootswatch.com/" target="_blank">Bootswatch</a></p>
+  <p>Make a selection below, to see how the site looks using different themes.</p>
+  <p>Your choice is stored in a <a href="https://usa.kaspersky.com/resource-center/definitions/cookies" target="_blank">cookie</a>, in order to  maintain your choice while you view the site.</p>
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="themeSelect">Choose a theme:</label>
+      <div class="row">
+      <div class="col-6">
+
+      <select class="form-control" id="themeSelect" name="theme">
+        <option value="">Default</option>
+        <option value="cerulean">Cerulean</option>
+        <option value="cosmo">Cosmo</option>
+        <option value="cyborg">Cyborg</option>
+        <option value="darkly">Darkly</option>
+        <option value="flatly">Flatly</option>
+        <option value="journal">Journal</option>
+        <option value="litera">Litera</option>
+        <option value="lumen">Lumen</option>
+        <option value="lux">Lux</option>
+        <option value="materia">Materia</option>
+        <option value="minty">Minty</option>
+        <option value="pulse">Pulse</option>
+        <option value="sandstone">Sandstone</option>
+        <option value="simplex">Simplex</option>
+        <option value="sketchy">Sketchy</option>
+        <option value="slate">Slate</option>
+        <option value="solar">Solar</option>
+        <option value="spacelab">Spacelab</option>
+        <option value="superhero">Superhero</option>
+        <option value="united">United</option>
+        <option value="yeti">Yeti</option>
+      </select>
+        </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>
+{% endblock %}
