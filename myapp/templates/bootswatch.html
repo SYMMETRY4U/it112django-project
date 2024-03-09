@@ -10,5 +10,7 @@
         <p>{{ page_content }}</p>
     </div>
 </div>
-<p><img src="{% static 'images/django-logo.png' %}" alt="Django Logo"></p>
+<p><img src="{% static page_image %}" alt="{{ default_alt_text }}"></p>
+
+
 {% endblock %}
