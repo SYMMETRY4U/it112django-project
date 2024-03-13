@@ -1,0 +1,15 @@
+<!-- invention_view.html -->
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h2>{{ invention.name }}</h2>
+    <p><strong>Inventor:</strong> {{ invention.inventor }}</p>
+    <p><strong>Year:</strong> {{ invention.year }}</p>
+    <p><strong>Category:</strong> {{ invention.category }}</p>
+    <p><strong>Description:</strong> {{ invention.description }}</p>
+    <p><strong>Background:</strong> {{ invention.background }}</p>
+    <p><strong>Outcome:</strong> {{ invention.outcome }}</p>
+    <!-- Add more fields as needed -->
+</div>
+{% endblock %}

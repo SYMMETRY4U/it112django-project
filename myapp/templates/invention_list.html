@@ -1,0 +1,32 @@
+<!-- invention_list.html -->
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h2>List of Inventions</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Invention</th>
+                <th>Inventor</th>
+                <th>Year</th>
+                <th>Description</th>
+                <th>Background</th>
+                <th>Outcome</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for invention in inventions %}
+            <tr>
+                <td><a href="{% url 'invention-view' invention.id %}">{{ invention.name }}</a></td>
+                <td>{{ invention.inventor }}</td>
+                <td>{{ invention.year }}</td>
+                <td>{{ invention.description }}</td>
+                <td>{{ invention.background }}</td>
+                <td>{{ invention.outcome }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
