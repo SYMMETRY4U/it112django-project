@@ -16,5 +16,9 @@ urlpatterns = [
   path('inventions/', InventionListView.as_view(), name='invention-list'),
   path('invention/<int:pk>/', InventionDetailView.as_view(), name='invention-view'),
   # more urls?
+  path('invention/create/', views.InventionCreateView.as_view(), name='create_invention'),
+  path('invention/<int:pk>/update/', views.InventionUpdateView.as_view(), name='update_invention'),
+  path('invention/<int:pk>/delete/', views.InventionDeleteView.as_view(), name='delete_invention'),
+
 
   ]
